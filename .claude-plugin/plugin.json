@@ -43,6 +43,19 @@
     "./skills/threads-reply",
     "./skills/voice-dna-creator",
     "./skills/web-demo-video",
-    "./skills/workshop-prep"
+    "./skills/workshop-prep",
+    "./skills/advisory-minutes",
+    "./skills/getback-broadcast",
+    "./skills/getback-recruit-mail",
+    "./skills/iphone-sms-read",
+    "./skills/lecture-recording-captions",
+    "./skills/naver-branding-post",
+    "./skills/naver-howto-post",
+    "./skills/naver-travel-post",
+    "./skills/testimonial-clips",
+    "./skills/threads-analytics",
+    "./skills/threads-long-thread",
+    "./skills/threads-to-reels",
+    "./skills/value-based-proposal"
   ]
 }
