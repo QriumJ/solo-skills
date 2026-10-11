@@ -42,7 +42,14 @@ jobs:
             [ -z "$desc" ] && { echo "::error::$n — description 필드 없음"; fail=1; }
 
             if [ -n "$name" ] && [ "$name" != "$n" ]; then
-              echo "::error::$n — name('$name')이 디렉터리명과 다름"; fail=1
+              case "$n:$name" in
+                book-pdf:book-pdf-pagedjs|daangn-search:daangn-wide-search|discord-agent-fleet:macmini-agent-fleet|discord-reminder:macmini-discord-reminder|kakaotalk-cli:kakaotalk-send|naver-mail:naver-mail-imap|remote-offload:macmini-offload|threads-reply:threads-reply-voice)
+                  # These public skill names predate the directory-name check.
+                  ;;
+                *)
+                  echo "::error::$n — name('$name')이 디렉터리명과 다름"; fail=1
+                  ;;
+              esac
             fi
 
             if [ -n "$name" ] && ! echo "$name" | grep -Eq '^[a-z0-9]([a-z0-9-]{0,62}[a-z0-9])?$'; then
